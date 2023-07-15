@@ -9,8 +9,10 @@ import {
   useGLTF,
   Text,
   Html,
+  useScroll,
 } from "@react-three/drei";
 import { useRef } from "react";
+import Models from "./Models";
 const FAIRY_COLORS_1 = [
   "#a172fd",
   "#a77afe",
@@ -22,18 +24,6 @@ const FAIRY_COLORS_1 = [
   "#e0cefe",
   "#ebddfe",
   "#f5ecfe",
-];
-const FAIRY_COLORS = [
-  "#a28eb8",
-  "#a2d2ff",
-  "#ffc0d7",
-  "#b4dbfe",
-  "#ffc8dd",
-  "#abd7ff",
-  "#ffb7d2",
-  "#bde0fe",
-  "#cdb4db",
-  "#ffafcc",
 ];
 
 const Castle = () => (
@@ -400,9 +390,7 @@ const Sparkles = () => (
     ></path>
   </svg>
 );
-const Models = () => {
-  const { nodes } = useGLTF("./book.glb");
-  console.log(nodes);
+const Scene = () => {
   const { width: w, height: h } = useThree((state) => state.viewport);
   const bRef = useRef();
   const o1Ref = useRef();
@@ -410,6 +398,7 @@ const Models = () => {
   const kRef = useRef();
   const endRef = useRef();
   const startRef = useRef();
+  const scroll = useScroll();
 
   useFrame(() => {
     startRef.current.position.x = 0;
@@ -418,70 +407,22 @@ const Models = () => {
     o2Ref.current.position.x = w * 5.5;
     kRef.current.position.x = w * 7.5;
     endRef.current.position.x = w * 9.5;
+
+    const canvas = document.querySelector("canvas");
+    if (scroll.offset < 0.2) {
+      canvas.style.background = "#52475e";
+    } else if (scroll.offset < 0.5) {
+      canvas.style.background = "#001D3D";
+    } else if (scroll.offset < 0.8) {
+      canvas.style.background = "#52475e";
+    } else {
+      canvas.style.background = "#52475e";
+    }
   });
   return (
     <>
       <Scroll>
-        <group position={[w, -1.1, -3]}>
-          <group scale={0.3}>
-            {[...Array(10)].map((_, i) => (
-              <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-                <meshStandardMaterial color={FAIRY_COLORS[i]} />
-              </mesh>
-            ))}
-            <mesh geometry={nodes.page.geometry}>
-              <meshStandardMaterial color={"#f3efe0"} />
-            </mesh>
-            <mesh geometry={nodes.cream.geometry}>
-              <meshToonMaterial color={"#fff1e6"} />
-            </mesh>
-          </group>
-        </group>
-        <group position={[w * 3, -1.1, -3]}>
-          <group scale={0.3}>
-            {[...Array(10)].map((_, i) => (
-              <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-                <meshStandardMaterial color={FAIRY_COLORS[i]} />
-              </mesh>
-            ))}
-            <mesh geometry={nodes.page.geometry}>
-              <meshStandardMaterial color={"#f3efe0"} />
-            </mesh>
-            <mesh geometry={nodes.cream.geometry}>
-              <meshToonMaterial color={"#fff1e6"} />
-            </mesh>
-          </group>
-        </group>
-        <group position={[w * 5, -1.1, -3]}>
-          <group scale={0.3}>
-            {[...Array(10)].map((_, i) => (
-              <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-                <meshStandardMaterial color={FAIRY_COLORS[i]} />
-              </mesh>
-            ))}
-            <mesh geometry={nodes.page.geometry}>
-              <meshStandardMaterial color={"#f3efe0"} />
-            </mesh>
-            <mesh geometry={nodes.cream.geometry}>
-              <meshToonMaterial color={"#fff1e6"} />
-            </mesh>
-          </group>
-        </group>
-        <group position={[w * 7, -1.1, -3]}>
-          <group scale={0.3}>
-            {[...Array(10)].map((_, i) => (
-              <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-                <meshStandardMaterial color={FAIRY_COLORS[i]} />
-              </mesh>
-            ))}
-            <mesh geometry={nodes.page.geometry}>
-              <meshStandardMaterial color={"#f3efe0"} />
-            </mesh>
-            <mesh geometry={nodes.cream.geometry}>
-              <meshToonMaterial color={"#fff1e6"} />
-            </mesh>
-          </group>
-        </group>
+        <Models />
       </Scroll>
       <mesh ref={startRef}>
         <Html className="start" />
@@ -551,11 +492,14 @@ function App() {
         </div>
       </div>
 
-      <Canvas camera={{ fov: 20 }}>
+      <Canvas
+        camera={{ fov: 20 }}
+        gl={{ antialias: true, powerPreference: "high-performance" }}
+      >
         <ambientLight intensity={0.7} />
         <directionalLight intensity={0.5} position={[20, 0, 10]} />
         <ScrollControls damping={0.5} pages={10} horizontal>
-          <Models />
+          <Scene />
           <Scroll html>
             <div
               className="quotes"
