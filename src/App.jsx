@@ -498,7 +498,7 @@ function App() {
       >
         <ambientLight intensity={0.7} />
         <directionalLight intensity={0.5} position={[20, 0, 10]} />
-        <ScrollControls damping={0.5} pages={10} horizontal>
+        <ScrollControls damping={0.5} pages={10.5} horizontal>
           <Scene />
           <Scroll html>
             <div
@@ -510,9 +510,9 @@ function App() {
             >
               Imagination is the only weapon in the war with reality.
               <div
+                className="author"
                 style={{
                   marginLeft: "10rem",
-                  fontSize: "2rem",
                 }}
               >
                 _Alice in Wonderland
@@ -530,9 +530,9 @@ function App() {
               beings...not to serve as appendages to machines, institutions, and
               systems.
               <div
+                className="author"
                 style={{
                   marginLeft: "6rem",
-                  fontSize: "2rem",
                 }}
               >
                 _Kurt Vonnegut, Player Piano
@@ -548,9 +548,9 @@ function App() {
             >
               I dream with my eyes open.
               <div
+                className="author"
                 style={{
                   marginLeft: "10rem",
-                  fontSize: "1.5rem",
                 }}
               >
                 _Jules Verne, Journey to the Center of the Earth
@@ -567,9 +567,9 @@ function App() {
               Indifference and neglect often do much more damage than outright
               dislike.
               <div
+                className="author"
                 style={{
                   marginLeft: "10rem",
-                  fontSize: "1.5rem",
                 }}
               >
                 _Albus Dumbledore, Harry Potter and the Order of the Phoenix
@@ -578,7 +578,7 @@ function App() {
             <div
               className="quotes the-end"
               style={{
-                left: "940vw",
+                left: "990vw",
                 width: "50rem",
                 top: "40vh",
                 fontSize: "8rem",

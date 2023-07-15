@@ -52,7 +52,7 @@ const MAGIC_COLORS = [
   "#ff711f",
 ];
 const PAGE_COLOR = "#f3efe0";
-const CREAM_COLOR = "#f4e9cd";
+const CREAM_COLOR = "#faedcd";
 const BLACK_COLOR = "#2b2c28";
 export default () => {
   const { nodes } = useGLTF("./book.glb");
@@ -60,7 +60,7 @@ export default () => {
   return (
     <>
       <group position={[w, -1.1, -3]}>
-        <group scale={0.3}>
+        <group>
           {[...Array(10)].map((_, i) => (
             <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
               <meshStandardMaterial color={FAIRY_COLORS[i]} />
@@ -75,7 +75,7 @@ export default () => {
         </group>
       </group>
       <group position={[w * 3, -1.1, -3]}>
-        <group scale={0.3}>
+        <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`scifi${i + 1}`].geometry}>
               <meshStandardMaterial color={SCIFI_COLORS[i]} />
@@ -99,7 +99,7 @@ export default () => {
           <mesh geometry={nodes.scifi_black.geometry}>
             <meshStandardMaterial color={BLACK_COLOR} />
           </mesh>
-          <mesh geometry={nodes.scifi_greenblue.geometry}>
+          <mesh geometry={nodes.scifi_screenblue.geometry}>
             <meshStandardMaterial color={"#A7D5E1"} />
           </mesh>
           <mesh geometry={nodes.scifi_screengreen.geometry}>
@@ -111,7 +111,7 @@ export default () => {
         </group>
       </group>
       <group position={[w * 5.05, -1.1, -3]}>
-        <group scale={0.3}>
+        <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`jungle${i + 1}`].geometry}>
               <meshStandardMaterial color={JUNGLE_COLORS[i]} />
@@ -132,7 +132,7 @@ export default () => {
         </group>
       </group>
       <group position={[w * 7.9, -1.1, -3]}>
-        <group scale={0.3}>
+        <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`magic${i + 1}`].geometry}>
               <meshStandardMaterial color={MAGIC_COLORS[i]} />
