@@ -44,12 +44,12 @@ const JUNGLE_COLORS = [
 ];
 
 const MAGIC_COLORS = [
-  "#370617",
-  "#6A040F",
-  "#9D0208",
-  "#D00000",
-  "#E85D04",
-  "#FBB539",
+  "#7f3109",
+  "#af4825",
+  "#c43117",
+  "#f55a00",
+  "#fc6735",
+  "#ff711f",
 ];
 const PAGE_COLOR = "#f3efe0";
 const CREAM_COLOR = "#f4e9cd";
@@ -131,18 +131,24 @@ export default () => {
           </mesh>
         </group>
       </group>
-      <group position={[w * 7, -1.1, -3]}>
+      <group position={[w * 7.9, -1.1, -3]}>
         <group scale={0.3}>
-          {[...Array(10)].map((_, i) => (
-            <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-              <meshStandardMaterial color={FAIRY_COLORS[i]} />
+          {[...Array(6)].map((_, i) => (
+            <mesh key={i} geometry={nodes[`magic${i + 1}`].geometry}>
+              <meshStandardMaterial color={MAGIC_COLORS[i]} />
             </mesh>
           ))}
-          <mesh geometry={nodes.page.geometry}>
+          <mesh geometry={nodes.magic_page.geometry}>
             <meshStandardMaterial color={PAGE_COLOR} />
           </mesh>
-          <mesh geometry={nodes.cream.geometry}>
+          <mesh geometry={nodes.magic_cream.geometry}>
             <meshToonMaterial color={CREAM_COLOR} />
+          </mesh>
+          <mesh geometry={nodes.magic_black.geometry}>
+            <meshToonMaterial color={BLACK_COLOR} />
+          </mesh>
+          <mesh geometry={nodes.magic_green.geometry}>
+            <meshToonMaterial color={"#8FC93A"} />
           </mesh>
         </group>
       </group>
