@@ -1,30 +1,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import {
-  ScrollControls,
-  CameraControls,
-  PerspectiveCamera,
-  Center,
-  Loader,
-  Scroll,
-  useGLTF,
-  Text,
-  Html,
-  useScroll,
-} from "@react-three/drei";
+import { ScrollControls, Scroll, Html, useScroll } from "@react-three/drei";
 import { useRef } from "react";
 import Models from "./Models";
-const FAIRY_COLORS_1 = [
-  "#a172fd",
-  "#a77afe",
-  "#ac82fe",
-  "#b691fe",
-  "#c1a0fe",
-  "#cbaffe",
-  "#d6bffe",
-  "#e0cefe",
-  "#ebddfe",
-  "#f5ecfe",
-];
 
 const Castle = () => (
   <svg

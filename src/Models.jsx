@@ -1,16 +1,5 @@
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import {
-  ScrollControls,
-  CameraControls,
-  PerspectiveCamera,
-  Center,
-  Loader,
-  Scroll,
-  useGLTF,
-  Text,
-  Html,
-} from "@react-three/drei";
-import { useRef } from "react";
+import { useThree } from "@react-three/fiber";
+import { useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 const FAIRY_COLORS = [
   "#a28eb8",
