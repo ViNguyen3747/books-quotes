@@ -414,7 +414,7 @@ const Scene = () => {
     } else if (scroll.offset < 0.5) {
       canvas.style.background = "#001D3D";
     } else if (scroll.offset < 0.8) {
-      canvas.style.background = "#52475e";
+      canvas.style.background = "#373d20";
     } else {
       canvas.style.background = "#52475e";
     }

@@ -33,8 +33,27 @@ const SCIFI_COLORS = [
   "#ffb703",
   "#2DBEC0",
 ];
+
+const JUNGLE_COLORS = [
+  "#6A8532",
+  "#87A330",
+  "#A1C349",
+  "#f48c06",
+  "#f2542d",
+  "#7f5539",
+];
+
+const MAGIC_COLORS = [
+  "#370617",
+  "#6A040F",
+  "#9D0208",
+  "#D00000",
+  "#E85D04",
+  "#FBB539",
+];
 const PAGE_COLOR = "#f3efe0";
-const CREAM_COLOR = "#fff1e6";
+const CREAM_COLOR = "#f4e9cd";
+const BLACK_COLOR = "#2b2c28";
 export default () => {
   const { nodes } = useGLTF("./book.glb");
   const { width: w, height: h } = useThree((state) => state.viewport);
@@ -78,7 +97,7 @@ export default () => {
             <meshStandardMaterial side={THREE.DoubleSide} color={CREAM_COLOR} />
           </mesh>
           <mesh geometry={nodes.scifi_black.geometry}>
-            <meshStandardMaterial color={"#2b2c28"} />
+            <meshStandardMaterial color={BLACK_COLOR} />
           </mesh>
           <mesh geometry={nodes.scifi_greenblue.geometry}>
             <meshStandardMaterial color={"#A7D5E1"} />
@@ -91,18 +110,24 @@ export default () => {
           </mesh>
         </group>
       </group>
-      <group position={[w * 5, -1.1, -3]}>
+      <group position={[w * 5.05, -1.1, -3]}>
         <group scale={0.3}>
-          {[...Array(10)].map((_, i) => (
-            <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
-              <meshStandardMaterial color={FAIRY_COLORS[i]} />
+          {[...Array(6)].map((_, i) => (
+            <mesh key={i} geometry={nodes[`jungle${i + 1}`].geometry}>
+              <meshStandardMaterial color={JUNGLE_COLORS[i]} />
             </mesh>
           ))}
-          <mesh geometry={nodes.page.geometry}>
+          <mesh geometry={nodes.jungle_page.geometry}>
             <meshStandardMaterial color={PAGE_COLOR} />
           </mesh>
-          <mesh geometry={nodes.cream.geometry}>
+          <mesh geometry={nodes.jungle_cream.geometry}>
             <meshToonMaterial color={CREAM_COLOR} />
+          </mesh>
+          <mesh geometry={nodes.jungle_black.geometry}>
+            <meshToonMaterial color={BLACK_COLOR} />
+          </mesh>
+          <mesh geometry={nodes.jungle_blue.geometry}>
+            <meshToonMaterial color={"#A7D5E1"} />
           </mesh>
         </group>
       </group>
