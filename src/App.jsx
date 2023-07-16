@@ -364,14 +364,28 @@ const Scene = () => {
     endRef.current.position.x = w * 9.5;
 
     const canvas = document.querySelector("canvas");
-    if (scroll.offset < 0.2) {
+    const body = document.querySelector("body");
+    const a = document.querySelector("a");
+    if (scroll.offset < 0.07 || scroll.offset >= 0.94) {
+      canvas.style.background = "#d9d6ca";
+      body.style.color = "#b18057";
+      a.style.color = "#b18057";
+    } else if (scroll.offset < 0.2) {
       canvas.style.background = "#52475e";
+      body.style.color = "#ffffff";
+      a.style.color = "#ffffff";
     } else if (scroll.offset < 0.5) {
       canvas.style.background = "#001D3D";
+      body.style.color = "#ffffff";
+      a.style.color = "#ffffff";
     } else if (scroll.offset < 0.7) {
       canvas.style.background = "#373d20";
-    } else {
+      body.style.color = "#ffffff";
+      a.style.color = "#ffffff";
+    } else if (scroll.offset < 0.94) {
       canvas.style.background = "#411b02";
+      body.style.color = "#ffffff";
+      a.style.color = "#ffffff";
     }
   });
   return (
@@ -576,7 +590,6 @@ function App() {
                 width: "50rem",
                 top: "40vh",
                 fontSize: "8rem",
-                color: "white",
               }}
             >
               The end.
