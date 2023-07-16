@@ -45,10 +45,10 @@ const CREAM_COLOR = "#faedcd";
 const BLACK_COLOR = "#2b2c28";
 export default () => {
   const { nodes } = useGLTF("./book.glb");
-  const { width: w, height: h } = useThree((state) => state.viewport);
+  const { width: w } = useThree((state) => state.viewport);
   return (
     <>
-      <group position={[w, -1.1, -3]}>
+      <group position={[w, -1.17, -3]}>
         <group>
           {[...Array(10)].map((_, i) => (
             <mesh key={i} geometry={nodes[`fairy${i + 1}`].geometry}>
@@ -63,7 +63,7 @@ export default () => {
           </mesh>
         </group>
       </group>
-      <group position={[w * 3, -1.1, -3]}>
+      <group position={[w * 3, -1.17, -3]}>
         <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`scifi${i + 1}`].geometry}>
@@ -99,7 +99,7 @@ export default () => {
           </mesh>
         </group>
       </group>
-      <group position={[w * 5.05, -1.1, -3]}>
+      <group position={[w * 5.05, -1.17, -3]}>
         <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`jungle${i + 1}`].geometry}>
@@ -110,17 +110,17 @@ export default () => {
             <meshStandardMaterial color={PAGE_COLOR} />
           </mesh>
           <mesh geometry={nodes.jungle_cream.geometry}>
-            <meshToonMaterial color={CREAM_COLOR} />
+            <meshStandardMaterial color={CREAM_COLOR} />
           </mesh>
           <mesh geometry={nodes.jungle_black.geometry}>
-            <meshToonMaterial color={BLACK_COLOR} />
+            <meshStandardMaterial color={BLACK_COLOR} />
           </mesh>
           <mesh geometry={nodes.jungle_blue.geometry}>
-            <meshToonMaterial color={"#A7D5E1"} />
+            <meshStandardMaterial color={"#A7D5E1"} />
           </mesh>
         </group>
       </group>
-      <group position={[w * 7.9, -1.1, -3]}>
+      <group position={[w * 7.9, -1.17, -3]}>
         <group>
           {[...Array(6)].map((_, i) => (
             <mesh key={i} geometry={nodes[`magic${i + 1}`].geometry}>
@@ -131,13 +131,13 @@ export default () => {
             <meshStandardMaterial color={PAGE_COLOR} />
           </mesh>
           <mesh geometry={nodes.magic_cream.geometry}>
-            <meshToonMaterial color={CREAM_COLOR} />
+            <meshStandardMaterial color={CREAM_COLOR} />
           </mesh>
           <mesh geometry={nodes.magic_black.geometry}>
-            <meshToonMaterial color={BLACK_COLOR} />
+            <meshStandardMaterial color={BLACK_COLOR} />
           </mesh>
           <mesh geometry={nodes.magic_green.geometry}>
-            <meshToonMaterial color={"#8FC93A"} />
+            <meshStandardMaterial color={"#8FC93A"} />
           </mesh>
         </group>
       </group>

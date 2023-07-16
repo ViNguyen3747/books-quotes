@@ -32,6 +32,39 @@ canvas {
   background-color: #ffffff;
   border-radius: 10px;
 }
+
+#top-deco {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  width: 95%;
+  border-bottom: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  padding: 0.2rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  font-style: italic;
+  font-family: "bookFont";
+}
+
+#page-number {
+  padding-top: 10px;
+  font-family: "Sono", sans-serif;
+}
 #carousel {
   position: absolute;
   z-index: 1;
@@ -45,7 +78,7 @@ canvas {
 }
 
 .letter {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: 0.3s ease;
   font-size: 4rem;
   font-family: "Sono", sans-serif;
@@ -70,6 +103,13 @@ canvas {
   width: 30rem;
   max-width: 100vw;
   font-family: "bookFont";
+}
+
+.title {
+  font-size: 7rem;
+  color: #ffffff;
+  letter-spacing: 2rem;
+  font-weight: 500;
 }
 
 .author {
@@ -103,7 +143,7 @@ canvas {
 }
 
 .sparkles {
-  margin-top: 25px;
+  margin-top: 10px;
   transition: 0.3s ease;
   -webkit-box-reflect: below -4.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
