@@ -15,7 +15,7 @@ body,
 }
 
 body {
-  color: #b18057;
+  color: #d4a373;
   font-family: "bookFont";
 }
 
@@ -24,7 +24,6 @@ canvas {
   height: 100%;
   background: #d9d6ca;
   transition: background 0.3s ease;
-  color: #b18057;
 }
 ::-webkit-scrollbar {
   height: 5px;

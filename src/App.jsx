@@ -368,8 +368,8 @@ const Scene = () => {
     const a = document.querySelector("a");
     if (scroll.offset < 0.07 || scroll.offset >= 0.94) {
       canvas.style.background = "#d9d6ca";
-      body.style.color = "#b18057";
-      a.style.color = "#b18057";
+      body.style.color = "#d4a373";
+      a.style.color = "#d4a373";
     } else if (scroll.offset < 0.2) {
       canvas.style.background = "#52475e";
       body.style.color = "#ffffff";
