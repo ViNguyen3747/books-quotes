@@ -316,7 +316,7 @@ const Magic = () => (
   </svg>
 );
 
-const Sparkles = () => (
+const Books = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
@@ -342,6 +342,55 @@ const Sparkles = () => (
         fill="#ff5576"
         d="M66,84H52c-1.7,0-3,1.3-3,3v20.2c0,1.6,1.8,2.6,3.1,1.6l5.7-4c0.7-0.5,1.6-0.5,2.3,0l5.7,4c1.3,0.9,3.1,0,3.1-1.6V87C69,85.3,67.7,84,66,84z"
       ></path>
+    </g>
+  </svg>
+);
+
+const Sparkles = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    x="0px"
+    y="0px"
+    width="50"
+    height="50"
+    viewBox="0,0,256,256"
+  >
+    <g
+      fillOpacity="0"
+      fill="#dddddd"
+      fillRule="nonzero"
+      stroke="none"
+      strokeWidth="1"
+      strokeLinecap="butt"
+      strokeLinejoin="miter"
+      strokeMiterlimit="10"
+      strokeDasharray=""
+      strokeDashoffset="0"
+      fontFamily="none"
+      fontWeight="none"
+      fontSize="none"
+      textAnchor="none"
+    >
+      <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+    </g>
+    <g
+      fill="#ffffff"
+      fillRule="nonzero"
+      stroke="none"
+      strokeWidth="1"
+      strokeLinecap="butt"
+      strokeLinejoin="miter"
+      strokeMiterlimit="10"
+      strokeDasharray=""
+      strokeDashoffset="0"
+      fontFamily="none"
+      fontWeight="none"
+      fontSize="none"
+      textAnchor="none"
+    >
+      <g transform="scale(5.12,5.12)">
+        <path d="M49.306,26.548l-11.24,-3.613l-3.613,-11.241c-0.134,-0.414 -0.518,-0.694 -0.953,-0.694c-0.435,0 -0.819,0.28 -0.952,0.694l-3.613,11.241l-11.24,3.613c-0.415,0.133 -0.695,0.517 -0.695,0.952c0,0.435 0.28,0.819 0.694,0.952l11.24,3.613l3.613,11.241c0.134,0.414 0.518,0.694 0.953,0.694c0.435,0 0.819,-0.28 0.952,-0.694l3.613,-11.241l11.24,-3.613c0.415,-0.133 0.695,-0.517 0.695,-0.952c0,-0.435 -0.28,-0.819 -0.694,-0.952zM1.684,13.949l7.776,2.592l2.592,7.776c0.136,0.408 0.517,0.683 0.948,0.683c0.431,0 0.813,-0.275 0.948,-0.684l2.592,-7.776l7.776,-2.592c0.409,-0.135 0.684,-0.517 0.684,-0.948c0,-0.431 -0.275,-0.813 -0.684,-0.949l-7.776,-2.592l-2.592,-7.776c-0.135,-0.408 -0.517,-0.683 -0.948,-0.683c-0.431,0 -0.813,0.275 -0.948,0.684l-2.592,7.775l-7.776,2.592c-0.409,0.137 -0.684,0.518 -0.684,0.949c0,0.431 0.275,0.813 0.684,0.949zM17.316,39.05l-5.526,-1.842l-1.842,-5.524c-0.135,-0.408 -0.517,-0.684 -0.948,-0.684c-0.431,0 -0.813,0.275 -0.948,0.684l-1.842,5.524l-5.525,1.842c-0.408,0.136 -0.684,0.518 -0.684,0.949c0,0.431 0.275,0.813 0.684,0.949l5.526,1.842l1.841,5.524c0.136,0.407 0.517,0.683 0.948,0.683c0.431,0 0.813,-0.275 0.948,-0.684l1.842,-5.524l5.526,-1.842c0.409,-0.136 0.684,-0.518 0.684,-0.948c0,-0.43 -0.275,-0.813 -0.684,-0.949z"></path>
+      </g>
     </g>
   </svg>
 );
@@ -436,8 +485,8 @@ const Overlay = () => {
   return (
     <>
       <div id="carousel">
-        <div className="sparkles" onClick={() => handleClick("start")}>
-          <Sparkles />
+        <div className="books" onClick={() => handleClick("start")}>
+          <Books />
         </div>
         <div className="letter" onClick={() => handleClick("b")}>
           <span>B</span>
@@ -463,8 +512,8 @@ const Overlay = () => {
             <Magic />
           </div>
         </div>
-        <div className="sparkles" onClick={() => handleClick("end")}>
-          <Sparkles />
+        <div className="books" onClick={() => handleClick("end")}>
+          <Books />
         </div>
       </div>
       <div id="top-deco">
@@ -491,109 +540,40 @@ function App() {
         <ScrollControls damping={0.5} pages={10.5} horizontal>
           <Scene />
           <Scroll html>
-            <div
-              className="quotes"
-              style={{
-                left: "35vw",
-                top: "25vh",
-                width: "40rem",
-              }}
-            >
+            <div className="quotes">
               <span className="title">BOOKS</span>
-              <div
-                className="author"
-                style={{
-                  marginLeft: "25rem",
-                }}
-              >
-                _My favorite quotes_
+              <div id="sparkle1">
+                <Sparkles />
               </div>
-            </div>
-            <div
-              className="quotes"
-              style={{
-                left: "200vw",
-                top: "20vh",
-              }}
-            >
-              Imagination is the only weapon in the war with reality.
-              <div
-                className="author"
-                style={{
-                  marginLeft: "10rem",
-                }}
-              >
-                _Alice in Wonderland
+              <div id="sparkle2">
+                <Sparkles />
               </div>
+              <div className="author">_And my favorite quotes_</div>
             </div>
-            <div
-              className="quotes"
-              style={{
-                left: "400vw",
-                top: "10vh",
-                width: "30rem",
-              }}
-            >
-              The main business of humanity is to do a good job of being human
+            <div className="quotes">
+              'Imagination is the only weapon in the war with reality.'
+              <div className="author">_Alice in Wonderland</div>
+            </div>
+            <div className="quotes">
+              'The main business of humanity is to do a good job of being human
               beings...not to serve as appendages to machines, institutions, and
-              systems.
-              <div
-                className="author"
-                style={{
-                  marginLeft: "6rem",
-                }}
-              >
-                _Kurt Vonnegut, Player Piano
-              </div>
+              systems.'
+              <div className="author">_Kurt Vonnegut, Player Piano</div>
             </div>
-            <div
-              className="quotes"
-              style={{
-                left: "600vw",
-                top: "10vh",
-                width: "50rem",
-              }}
-            >
-              I dream with my eyes open.
-              <div
-                className="author"
-                style={{
-                  marginLeft: "10rem",
-                }}
-              >
+            <div className="quotes">
+              'I dream with my eyes open.'
+              <div className="author">
                 _Jules Verne, Journey to the Center of the Earth
               </div>
             </div>
-            <div
-              className="quotes"
-              style={{
-                left: "760vw",
-                top: "50vh",
-                width: "50rem",
-              }}
-            >
-              Indifference and neglect often do much more damage than outright
-              dislike.
-              <div
-                className="author"
-                style={{
-                  marginLeft: "10rem",
-                }}
-              >
+            <div className="quotes">
+              'Indifference and neglect often do much more damage than outright
+              dislike.'
+              <div className="author">
                 _Albus Dumbledore, Harry Potter and the Order of the Phoenix
               </div>
             </div>
-            <div
-              className="quotes the-end"
-              style={{
-                left: "990vw",
-                width: "50rem",
-                top: "40vh",
-                fontSize: "8rem",
-              }}
-            >
-              The end.
-            </div>
+            <div className="quotes the-end">The end.</div>
           </Scroll>
         </ScrollControls>
       </Canvas>

@@ -12,11 +12,17 @@ body,
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: url("/cursor.svg"), default;
 }
 
 body {
   color: #d4a373;
   font-family: "bookFont";
+}
+
+::selection {
+  background: #d4a373;
+  color: white;
 }
 
 canvas {
@@ -63,6 +69,7 @@ a {
   font-style: italic;
   font-family: "bookFont";
   color: #ffffff;
+  cursor: url("/cursor.svg"), default;
 }
 
 #page-number {
@@ -93,9 +100,10 @@ a {
 }
 
 .letter:hover,
-.sparkles:hover {
+.books:hover {
   cursor: pointer;
   transform: scale(1.3);
+  cursor: url("/cursor.svg"), default;
 }
 
 .quotes {
@@ -107,26 +115,81 @@ a {
   font-family: "bookFont";
 }
 
+.author {
+  font-size: 1.5rem;
+}
+/* books */
+.quotes:nth-child(1) {
+  left: 35vw;
+  top: 25vh;
+  width: 50rem;
+}
+
+/* quotes for B */
+.quotes:nth-child(2) {
+  left: 200vw;
+  top: 20vh;
+  width: 40rem;
+}
+
+/* quotes for O1 */
+.quotes:nth-child(3) {
+  left: 400vw;
+  top: 10vh;
+  width: 30rem;
+}
+
+/* quotes for O2 */
+.quotes:nth-child(4) {
+  left: 600vw;
+  top: 10vh;
+  width: 50rem;
+}
+
+/* quotes for k */
+.quotes:nth-child(5) {
+  left: 760vw;
+  top: 50vh;
+  width: 50rem;
+}
+
+/* quotes for end */
+.quotes:nth-child(6) {
+  left: 990vw;
+  top: 40vh;
+  width: 50rem;
+}
+
+.the-end {
+  font-size: 8rem;
+}
+
 .title {
   font-size: 7rem;
   letter-spacing: 2rem;
   font-weight: 500;
 }
-
-.author {
-  font-size: 1.5rem;
+#sparkle1 {
+  position: absolute;
+  margin-top: -260px;
+  margin-left: 510px;
+}
+#sparkle2 {
+  position: absolute;
+  margin-top: -90px;
+  margin-left: -30px;
 }
 
-#castle {
-  margin-top: -70px;
-  margin-left: -15px;
-}
 #castle > svg,
 #ufo > svg,
 #bird > svg,
 #magic > svg {
   width: 2.5rem;
   height: 2.5rem;
+}
+#castle {
+  margin-top: -70px;
+  margin-left: -15px;
 }
 #ufo {
   margin-top: -100px;
@@ -143,12 +206,57 @@ a {
   margin-left: 15px;
 }
 
-.sparkles {
+.books {
   margin-top: 10px;
   transition: 0.3s ease;
   -webkit-box-reflect: below -4.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
-.sparkles > svg {
+.books > svg {
   width: 3.5rem;
   height: 3.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .letter {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0.4rem;
+    -webkit-box-reflect: below -2.7rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  }
+  #castle > svg,
+  #ufo > svg,
+  #bird > svg,
+  #magic > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #castle {
+    margin-top: -62px;
+  }
+  #ufo {
+    margin-top: -90px;
+  }
+
+  #bird {
+    margin-top: -87px;
+  }
+
+  #magic {
+    margin-top: -60px;
+  }
+  .books {
+    margin-top: 8px;
+    transition: 0.3s ease;
+    -webkit-box-reflect: below -3.5rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  }
+  .books > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .title {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
 }
