@@ -256,7 +256,61 @@ a {
   }
 
   .title {
-    font-size: 5rem;
+    font-size: 4rem;
     letter-spacing: 1rem;
+  }
+
+  .quotes {
+    font-size: 2rem;
+  }
+
+  .author {
+    font-size: 1rem;
+  }
+
+  .quotes:nth-child(1) {
+    left: 10vw;
+    width: 30rem;
+  }
+
+  #sparkle1 {
+    margin-top: -160px;
+    margin-left: 300px;
+  }
+
+  #sparkle2 {
+    margin-top: -80px;
+    margin-left: -23px;
+  }
+  #sparkle1 > svg,
+  #sparkle2 > svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .quotes:nth-child(2) {
+    left: 152vw;
+    width: 25rem;
+  }
+
+  .quotes:nth-child(3) {
+    left: 355vw;
+    top: 12vh;
+    width: 20rem;
+  }
+
+  .quotes:nth-child(4) {
+    left: 560vw;
+    top: 20vh;
+  }
+  .quotes:nth-child(5) {
+    left: 755vw;
+    top: 40vh;
+  }
+  .quotes:nth-child(6) {
+    left: 970vw;
+  }
+  .the-end {
+    font-size: 5rem;
   }
 }
