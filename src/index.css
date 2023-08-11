@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Sono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 
-@font-face {
-  font-family: "bookFont";
-  src: url("./assets/book-font.woff") format("woff");
-}
 html,
 body,
 #root {
@@ -17,7 +13,7 @@ body,
 
 body {
   color: #d4a373;
-  font-family: "bookFont";
+  font-family: "Dancing Script", cursive;
 }
 
 ::selection {
@@ -67,14 +63,14 @@ a {
   font-size: 1rem;
   letter-spacing: 0.3rem;
   font-style: italic;
-  font-family: "bookFont";
+  font-family: "Dancing Script", cursive;
   color: #ffffff;
   cursor: url("/cursor.svg"), default;
 }
 
 #page-number {
   padding-top: 10px;
-  font-family: "Sono", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 #carousel {
   position: absolute;
@@ -88,15 +84,15 @@ a {
 }
 
 .letter {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   transition: 0.3s ease;
-  font-size: 4rem;
-  font-family: "Sono", sans-serif;
+  font-size: 3.5rem;
+  font-family: "Dancing Script", cursive;
   text-transform: capitalize;
   font-weight: bold;
   width: 3rem;
   padding: 0 1rem;
-  -webkit-box-reflect: below -3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  -webkit-box-reflect: below -2.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
 
 .letter:hover,
@@ -112,7 +108,7 @@ a {
   z-index: 1;
   width: 30rem;
   max-width: 100vw;
-  font-family: "bookFont";
+  font-family: "Dancing Script", cursive;
 }
 
 .author {
@@ -171,12 +167,12 @@ a {
 }
 #sparkle1 {
   position: absolute;
-  margin-top: -260px;
-  margin-left: 510px;
+  margin-top: -140px;
+  margin-left: 440px;
 }
 #sparkle2 {
   position: absolute;
-  margin-top: -90px;
+  margin-top: -70px;
   margin-left: -30px;
 }
 
@@ -188,7 +184,7 @@ a {
   height: 2.5rem;
 }
 #castle {
-  margin-top: -70px;
+  margin-top: -58px;
   margin-left: -15px;
 }
 #ufo {
@@ -197,19 +193,19 @@ a {
 }
 
 #bird {
-  margin-top: -100px;
+  margin-top: -90px;
   margin-left: -15px;
 }
 
 #magic {
-  margin-top: -67px;
+  margin-top: -57px;
   margin-left: 15px;
 }
 
 .books {
   margin-top: 10px;
   transition: 0.3s ease;
-  -webkit-box-reflect: below -4.6rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  -webkit-box-reflect: below -2.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
 .books > svg {
   width: 3.5rem;
@@ -221,7 +217,7 @@ a {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     padding: 0 0.4rem;
-    -webkit-box-reflect: below -2.7rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    -webkit-box-reflect: below -2rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   }
   #castle > svg,
   #ufo > svg,
@@ -246,9 +242,9 @@ a {
     margin-top: -60px;
   }
   .books {
-    margin-top: 8px;
+    margin-top: 7px;
     transition: 0.3s ease;
-    -webkit-box-reflect: below -3.5rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    -webkit-box-reflect: below -4.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   }
   .books > svg {
     width: 2.5rem;
