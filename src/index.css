@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 html,
 body,
 #root {
@@ -87,12 +87,11 @@ a {
   margin-bottom: 0.5rem;
   transition: 0.3s ease;
   font-size: 3.5rem;
-  font-family: "Dancing Script", cursive;
   text-transform: capitalize;
-  font-weight: bold;
   width: 3rem;
   padding: 0 1rem;
-  -webkit-box-reflect: below -2.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  font-family: "Bebas Neue", sans-serif;
+  -webkit-box-reflect: below -2.7rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
 
 .letter:hover,
@@ -180,12 +179,12 @@ a {
 #ufo > svg,
 #bird > svg,
 #magic > svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
 }
 #castle {
-  margin-top: -58px;
-  margin-left: -15px;
+  margin-top: -70px;
+  margin-left: -18px;
 }
 #ufo {
   margin-top: -100px;
@@ -198,18 +197,18 @@ a {
 }
 
 #magic {
-  margin-top: -57px;
+  margin-top: -70px;
   margin-left: 15px;
 }
 
 .books {
   margin-top: 10px;
   transition: 0.3s ease;
-  -webkit-box-reflect: below -2.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  -webkit-box-reflect: below -4.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
 }
 .books > svg {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -217,18 +216,19 @@ a {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     padding: 0 0.4rem;
-    -webkit-box-reflect: below -2rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    -webkit-box-reflect: below -2.7rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   }
   #castle > svg,
   #ufo > svg,
   #bird > svg,
   #magic > svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   #castle {
-    margin-top: -62px;
+    margin-top: -70px;
+    margin-left: -10px;
   }
   #ufo {
     margin-top: -90px;
@@ -239,16 +239,16 @@ a {
   }
 
   #magic {
-    margin-top: -60px;
+    margin-top: -70px;
   }
   .books {
     margin-top: 7px;
     transition: 0.3s ease;
-    -webkit-box-reflect: below -4.3rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+    -webkit-box-reflect: below -5.5rem linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
   }
   .books > svg {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
   }
 
   .title {
