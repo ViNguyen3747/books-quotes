@@ -415,11 +415,7 @@ const Scene = () => {
     const canvas = document.querySelector("canvas");
     const body = document.querySelector("body");
     const a = document.querySelector("a");
-    if (scroll.offset < 0.07 || scroll.offset >= 0.94) {
-      canvas.style.background = "#d9d6ca";
-      body.style.color = "#d4a373";
-      a.style.color = "#d4a373";
-    } else if (scroll.offset < 0.2) {
+    if (scroll.offset < 0.2) {
       canvas.style.background = "#52475e";
       body.style.color = "#ffffff";
       a.style.color = "#ffffff";
@@ -431,7 +427,7 @@ const Scene = () => {
       canvas.style.background = "#373d20";
       body.style.color = "#ffffff";
       a.style.color = "#ffffff";
-    } else if (scroll.offset < 0.94) {
+    } else if (scroll.offset < 0.94 || scroll.offset >= 0.94) {
       canvas.style.background = "#411b02";
       body.style.color = "#ffffff";
       a.style.color = "#ffffff";
